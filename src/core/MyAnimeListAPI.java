@@ -40,7 +40,6 @@ public class MyAnimeListAPI implements IMyAnimeListAPI {
         return this.getAnswer(conn);
     }
 
-
     @Override
     public void setProfile(IProfile profile) {
         this.login = profile.getLogin();

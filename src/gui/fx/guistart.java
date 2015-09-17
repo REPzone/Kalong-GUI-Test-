@@ -1,9 +1,8 @@
-package gui;
+package gui.fx;
 
 import java.io.IOException;
 
 import javafx.application.Application;
-import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
@@ -29,7 +28,7 @@ public class guistart extends Application {
     public void initRootLayout() {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(guistart.class.getResource("view/RootScene.fxml"));
+            loader.setLocation(guistart.class.getResource("view/head/RootScene.fxml"));
             rootLayout = (BorderPane) loader.load();
             
             Scene scene = new Scene(rootLayout);
@@ -44,7 +43,7 @@ public class guistart extends Application {
     public void showPersonOverview() {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(guistart.class.getResource("view/InfoScene.fxml"));
+            loader.setLocation(guistart.class.getResource("view/head/InfoScene.fxml"));
             AnchorPane personOverview = (AnchorPane) loader.load();
             
             rootLayout.setCenter(personOverview);
@@ -58,7 +57,4 @@ public class guistart extends Application {
 		return primaryStage;
 	}
 
-    public static void main(String[] args) {
-        launch(args);
-    }
 }
