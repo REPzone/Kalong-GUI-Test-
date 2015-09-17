@@ -15,7 +15,6 @@ import core.Engine;
  */
 public class main {
     public static void main(String args[]) {
-        (new Thread(new Engine())).run();
-        (new Thread(new CLI())).run();
+        launch(args);
     }
 }
