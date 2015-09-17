@@ -7,6 +7,7 @@ package gui.fx;
 
 import static javafx.application.Application.launch;
 import core.CLI;
+import core.Engine;
 
 /**
  *
@@ -14,6 +15,7 @@ import core.CLI;
  */
 public class main {
     public static void main(String args[]) {
+        (new Thread(new Engine())).run();
         (new Thread(new CLI())).run();
     }
 }
